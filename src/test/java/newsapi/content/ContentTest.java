@@ -20,10 +20,10 @@ public class ContentTest {
 	@Test
 	public void canConvertVersion1NewsStoryJsonToObject() {
 		// Setup
-		String jsonSearchResult = TestUtil.loadResource("/version1-news-story.json");
+		String jsonGetResult = TestUtil.loadResource("/version1-news-story.json");
 
 		// Exercise
-		Version1Content content = JsonParser.fromJson(jsonSearchResult, Version1Content.class);
+		Version1Content content = JsonParser.fromJson(jsonGetResult, Version1Content.class);
 
 		// Assert
 		assertThat(content, is(instanceOf(Version1NewsStory.class)));

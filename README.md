@@ -21,7 +21,10 @@ Key classes:
 * Version1ImageGallery
 * Version1Collection
 
-Usage: See newsapi.content.ContentTest
+Usage: 
+<pre>
+See newsapi.content.ContentTest
+</pre>
 
 JSON Parser
 -----------
@@ -42,12 +45,21 @@ Version1Content content = JsonParser.fromJson(jsonGetResult, Version1Content.cla
 Version1NewsStory content = JsonParser.fromJson(jsonGetResult, Version1NewsStory.class);
 </pre>
 
+Also see:
+<pre>
+See newsapi.content.ContentTest
+</pre>
+
 Proxy Servlet
 -------------
-A simple proxy servlet to forward requests to Mashery.  Useful to get around the cross-origin domain problem with Javascript web apps.  To utilise this you will also need to serve your web app and Javascript from this container.
+A simple proxy servlet to forward requests to Mashery.  Useful to get around the cross-origin domain problem with Javascript web apps.  
+
+Note: To utilise this fully, you will also need to serve your web app and Javascript from this container.
 
 Usage:
+<pre>
 mvn jetty:run -Dapi_key=<your-mashery-api-key>
+</pre>
 
 This will fire up a Jetty container with the proxy running on localhost:8080/proxy.  You can then proxy requests through to Mashery with:
 http://localhost:8080/proxy/content/v1/

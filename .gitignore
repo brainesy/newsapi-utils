@@ -1,0 +1,12 @@
+.classpath
+.DS_Store
+.project
+.settings/
+.idea/
+newsapi.iml
+jmeter.log
+*rebel.xml
+/bin
+data/
+target/
+patches/

@@ -52,7 +52,6 @@ import org.apache.commons.lang3.StringUtils;
 
 public class ProxyServlet extends HttpServlet {
 	private static final String MasheryHost = "newsaustralia.api.mashery.com";
-	private static final String MasheryDeveloperKey = "REPLACE_WITH_YOUR_MASHERY_DEVELOPER_KEY";
 
 	private static final Charset UTF_8 = Charset.forName("UTF-8");
 	private static final List<String> IGNORE_HEADERS = Arrays.asList("Host");
@@ -104,7 +103,7 @@ public class ProxyServlet extends HttpServlet {
 
 		sb.append(MasheryHost);
 		sb.append(req.getRequestURI());
-		sb.append("?api_key=" + MasheryDeveloperKey);
+		sb.append("?api_key=" + getDeveloperKey());
 
 		String qs = req.getQueryString();
 		if (qs != null) {
@@ -112,6 +111,16 @@ public class ProxyServlet extends HttpServlet {
 		}
 
 		return remapUrl(sb.toString());
+	}
+
+	private String getDeveloperKey() {
+		String key = System.getProperty("api_key");
+
+		if (key == null || key.isEmpty()) {
+			throw new RuntimeException("Mashery developer key not defined.  Pass the developer key in the api_key JVM arg.");
+		}
+
+		return key;
 	}
 
 	private String remapUrl(String proxiedUrl) {

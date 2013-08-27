@@ -58,7 +58,7 @@ Note: To utilise this fully, you will also need to serve your web app and Javasc
 
 Usage:
 <pre>
-mvn jetty:run -Dapi_key=<your-mashery-api-key>
+mvn jetty:run -Dapi_key=your-mashery-api-key
 </pre>
 
 This will fire up a Jetty container with the proxy running on localhost:8080/proxy.  You can then proxy requests through to Mashery with:

@@ -66,9 +66,7 @@ http://localhost:8080/proxy/content/v1/
 
 LittleApp
 ---------
-LittleApp is a 'reference' implementation of a web app utilising NewsAPI.  It makes use of the ContentAPI, PreferencesAPI and PersonAPI (including Activity Streams).  LittleApp is availible at <littleapp.com.au>
+LittleApp is a 'reference' implementation of a web app utilising NewsAPI.  It makes use of the ContentAPI, PreferencesAPI and PersonAPI (including Activity Streams).  LittleApp is availible at [http://littleapp.com.au](http://littleapp.com.au)
 
 See the [I/O docs](http://newsaustralia.mashery.com/io-docs) page for more information on getting access to the LittleApp code.
-
-
 
